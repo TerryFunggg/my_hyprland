@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## Files
+#CONFIG="$HOME/.config/wofi/config"
+#STYLE="$HOME/.config/wofi/style.css"
+#COLORS="$HOME/.config/wofi/colors"
+
+
+DIR=$HOME/wallpapers
+PICS=($(ls ${DIR}))
+
+RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
+
+if [[ $(pidof hyprpaper) ]]; then
+  pkill hyprpaper
+fi
+swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
