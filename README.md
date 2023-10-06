@@ -19,3 +19,12 @@ ps. below app can replaced
 
 ## Wedget Style
 [To link](https://github.com/TerryFunggg/my_eww_widgets)
+
+## Rofi 
+[Original Config](https://github.com/adi1090x/rofi/tree/master)
+
+move rofi theme config
+(modify file path in style1)
+```sh
+cp -R rofi ~/.config/
+```
